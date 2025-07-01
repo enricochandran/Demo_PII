@@ -4,3 +4,5 @@ openpyxl
 xlrd
 python-dotenv
 requests
+io
+re
