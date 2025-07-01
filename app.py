@@ -5,7 +5,7 @@ import io
 
 st.title("PII Masker")
 
-uploaded_file = st.file_uploader("Unggah file CSV/XLS", type=["csv", "xls", "xlsx"])
+uploaded_file = st.file_uploader("Unggah file", type=["csv", "xls", "xlsx"])
 
 if uploaded_file:
     if uploaded_file.name.endswith('.csv'):
