@@ -47,8 +47,8 @@ def mask_socialmedia(text):
 def mask_birthdate(text):
     text = str(text)
     masked_text = re.sub(r'\b\d{4}-\d{2}-\d{2}\b', r'****-**-**', text)
-    masked_text = re.sub(r'\b\d{2}-\d{2}-\d{4}\b', r'**-**-****', text)
-    masked_text = re.sub(r'\b\d{2}-\d{2}-\d{2}\b', r'**-**-**', text)
+    masked_text = re.sub(r'\b\d{2}-\d{2}-\d{4}\b', r'**-**-****', masked_text)
+    masked_text = re.sub(r'\b\d{2}-\d{2}-\d{2}\b', r'**-**-**', masked_text)
     masked_text = re.sub(r'\b\d{2}/\d{2}/\d{4}\b', r'**/**/****', masked_text)
     masked_text = re.sub(r'\b\d{4}/\d{2}/\d{2}\b', r'****/**/**', masked_text)
     masked_text = re.sub(r'\b\d{2}/\d{2}/\d{2}\b', r'**/**/**', masked_text)
@@ -73,6 +73,6 @@ def mask_text(text):
     masked_text = mask_purchase_id(masked_text)
     masked_text = mask_socialmedia(masked_text)
     masked_text = mask_birthdate(masked_text)
-    masked_text = mask_socialmedia(masked_text)
-    masked_text = mask_age(masked_age)
+    masked_text = mask_age(masked_text)
+    
     return masked_text
