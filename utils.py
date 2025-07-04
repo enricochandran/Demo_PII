@@ -53,7 +53,7 @@ def mask_birthdate(text):
     masked_text = re.sub(r'\b\d{4}/\d{2}/\d{2}\b', r'****/**/**', masked_text)
     masked_text = re.sub(r'\b\d{2}/\d{2}/\d{2}\b', r'**/**/**', masked_text)
     masked_text = re.sub(r'\b\d{2}\.\d{2}\.\d{4}\b', r'**\.**\.****', masked_text)
-    masked_text = re.sub(r'\b\d{4}\.\d{2}\.\d{4}\b', r'****\.**\.**', masked_text)
+    masked_text = re.sub(r'\b\d{4}\.\d{2}\.\d{2}\b', r'****\.**\.**', masked_text)
     masked_text = re.sub(r'\b\d{2}\.\d{2}\.\d{2}\b', r'**\.**\.**', masked_text)
     masked_text = re.sub(r'\b(19|20)\d{2}\b', r'****', masked_text)
     return masked_text
