@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from utils import mask_name, mask_email, mask_phone, mask_address, mask_purchase_id, mask_birthdate, mask_socialmedia
+from utils import mask_name, mask_email, mask_phone, mask_address, mask_purchase_id, mask_birthdate, mask_socialmedia, mask_age
 import io
 
 st.title("PII Masker")
@@ -63,7 +63,9 @@ if uploaded_file:
             'X ID': mask_socialmedia,
             'Tiktok': mask_socialmedia,
             'Tiktok Username': mask_socialmedia,
-            'Tiktok ID': mask_socialmedia
+            'Tiktok ID': mask_socialmedia,
+            'Umur': mask_age,
+            'Age': mask_age
         }
 
         columns_to_mask_only = {
